@@ -1,22 +1,22 @@
 {
-  "name": "org-e2e",
+  "name": "je-host-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/org-e2e/src",
+  "sourceRoot": "apps/je-host-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nx/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/org-e2e/cypress.config.ts",
-        "devServerTarget": "org:serve:development",
+        "cypressConfig": "apps/je-host-e2e/cypress.config.ts",
+        "devServerTarget": "je-host:serve:development",
         "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "org:serve:production"
+          "devServerTarget": "je-host:serve:production"
         },
         "ci": {
-          "devServerTarget": "org:serve-static"
+          "devServerTarget": "je-host:serve-static"
         }
       }
     },
@@ -24,10 +24,10 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/org-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": ["apps/je-host-e2e/**/*.{js,ts}"]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": ["org"]
+  "implicitDependencies": ["je-host"]
 }
