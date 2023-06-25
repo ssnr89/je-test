@@ -9,11 +9,11 @@ pipeline {
                 branch 'main'
             }
             steps {
-                sh """
+                bat """
                 echo "Building Artifact from Master branch"
                 """
 
-                sh """
+                bat """
                 echo "Deploying Code from Master branch"
                 """
             }
