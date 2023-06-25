@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Master Branch Deploy Code') {
             when {
-                branch 'main'
+                branch 'master'
             }
             steps {
                 sh """
