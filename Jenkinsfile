@@ -1,7 +1,7 @@
 pipeline {
     agent any
     triggers {
-        pollSCM('') //Empty quotes tells it to build on a push
+        githubPush()
     }
     stages {
         stage('Master Branch Deploy Code') {
