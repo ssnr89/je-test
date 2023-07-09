@@ -9,13 +9,8 @@ pipeline {
                 branch 'main'
             }
             steps {
-                bat """
-                echo "Building Artifact from Master branch"
-                """
-
-                bat """
-                echo "Deploying Code from Master branch"
-                """
+                bat "npm ci"
+                bat "npx nx build je-host"
             }
         }
         // stage('Develop Branch Deploy Code') {
