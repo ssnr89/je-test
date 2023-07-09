@@ -11,6 +11,7 @@ pipeline {
             steps {
                 bat "npm ci"
                 bat "npx nx build je-host"
+                bat "npx nx test je-host"
             }
         }
         // stage('Develop Branch Deploy Code') {
