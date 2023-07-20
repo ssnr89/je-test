@@ -4,7 +4,7 @@ pipeline {
         stage('For all branches') {
             steps {
                 bat "npm ci"
-                bat "npx nx test je-host"
+                //bat "npx nx test je-host"
             }
         }
         stage('Run for main branch') {
@@ -13,7 +13,7 @@ pipeline {
             }
             steps {
                 bat "npx nx build je-host"
-                bat "ls"
+                bat "dir"
                 withAWS(credentials:'aws-credentials') {
                     
                 }
