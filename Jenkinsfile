@@ -19,6 +19,6 @@ pipeline {
                     // s3Upload(bucket:"je-int-deploy", includePathPattern:'**/*', workingDir:'dist/apps/je-host')
                 }
             }
-        }s
+        }
     }
 }
