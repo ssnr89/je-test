@@ -16,7 +16,7 @@ pipeline {
             }
             steps {
                 bat "ls"
-           }
+            }
         }
     }
 }
