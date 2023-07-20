@@ -14,7 +14,7 @@ pipeline {
             steps {
                 bat "npx nx build je-host"
                 bat "dir"
-                withAWS(credentials:'aws-credentials') {
+                withAWS(credentials:'aws-credentials', region:'ap-south-1') {
                     s3Delete(bucket:'je-int-deploy', path:'/*')
                     // s3Upload(bucket:"je-int-deploy", includePathPattern:'**/*', workingDir:'dist/apps/je-host')
                 }
