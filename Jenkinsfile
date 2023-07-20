@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    triggers {
-        githubPush()
-    }
     stages {
         stage('For all branches') {
             steps {
@@ -16,6 +13,12 @@ pipeline {
             }
             steps {
                 bat "npx nx build je-host"
+           }
+           steps {
+                bat "ls"
+                withAWS(credentials:'aws-credentials') {
+                    
+                }
            }
         }
     }
