@@ -16,9 +16,6 @@ pipeline {
             }
             steps {
                 bat "ls"
-                withAWS(credentials:'aws-credentials') {
-                    
-                }
            }
         }
     }
