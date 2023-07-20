@@ -14,9 +14,6 @@ pipeline {
             steps {
                 bat "npx nx build je-host"
             }
-            steps {
-                bat "ls"
-            }
         }
     }
 }
