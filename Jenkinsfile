@@ -13,8 +13,8 @@ pipeline {
             }
             steps {
                 bat "npx nx build je-host"
-           }
-           steps {
+            }
+            steps {
                 bat "ls"
                 withAWS(credentials:'aws-credentials') {
                     
