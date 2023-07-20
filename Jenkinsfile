@@ -15,7 +15,7 @@ pipeline {
                 bat "npx nx build je-host"
                 bat "dir"
                 withAWS(credentials:'aws-credentials') {
-                    
+                    s3Upload(bucket:"je-int-deploy", path:'je-host', includePathPattern:'**/*', workingDir:'dist')
                 }
             }
         }
