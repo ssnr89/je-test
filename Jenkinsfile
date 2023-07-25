@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('For all branches') {
+        stage('Test and Code quality') {
             steps {
                 bat "npm ci"
                 bat "npx nx test je-host"
